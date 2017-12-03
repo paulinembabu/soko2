@@ -1,0 +1,394 @@
+.card-master, .card-visa, .card-amex {
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: auto 90%;
+}
+
+/** {*/
+    /*box-sizing: border-box;*/
+/*}*/
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.form-container {
+    width: 310px;
+    overflow: auto;
+    background-color: #fefefe;
+    overflow: hidden;
+    position: relative;
+}
+
+@font-face {
+    font-family: "Montserrat Light";
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/227389/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/227389/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/227389/Montserrat-Bold.ttf");
+}
+
+.form-header {
+    padding: 15px;
+
+}
+#formClose {
+    background-color: #fafafa;
+    border: 1px solid #dcdee1;
+    border-radius: 4px;
+    height: 18px;
+    width: 18px;
+    font-size: 11px;
+    color: #bbc6cd;
+    text-align: center;
+    font-family: "Montserrat Bold";
+    padding: 0;
+    display: inline-block;
+    padding-bottom: 1px;
+    vertical-align: text-bottom;
+}
+#formClose:hover {
+    color: #fff;
+}
+
+.form-header h1 {
+    font-family: "Baskerville Old Face";
+    color: #fff;
+    font-size: 10px;
+    margin-right: 92px;
+    margin-top: 7px;
+    margin-bottom: 3px;
+    display: inline-block;
+}
+
+.form-group {
+    position: relative;
+    padding: 22px 15px;
+}
+input, select {
+    border: 1px solid #d9d9d9;
+    background: #fefefe;
+    border-radius: 3px;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 12px;
+    padding-right: 5px;
+    font-family: "Montserrat Light";
+    font-size: 13px;
+    color: #6f7982;
+    width: 278px;
+}
+input:hover, select:hover {
+    border-color: #a6c8ff;
+}
+
+select {
+    appearance: none;
+    line-height: 26px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/227389/select.png) no-repeat;
+    background-position: right 5px center;
+}
+select option[default] {
+    display: none;
+}
+
+#CreditCardNumber, #OwnerName {
+    margin-bottom: 22px;
+}
+#ExpDate, #ZipCode {
+    width: 132px;
+    margin-right: 9px;
+}
+#SecCode, #country {
+    width: 132px;
+}
+
+.ib {
+    display: inline-block;
+    position: relative;
+}
+
+.help-icon {
+    position: absolute;
+    top: 9px;
+    right: 6px;
+    border-radius: 30px;
+    background: #d3d3d3;
+    height: 15px;
+    width: 15px;
+    font-size: 12px;
+    padding-left: 0px;
+    color: #fff;
+    cursor: pointer;
+}
+#helpZip {
+    right: 16px;
+}
+.popup-info {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+    box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.26);
+    width: 250px;
+    padding: 15px;
+    font-family: "Montserrat Light";
+    font-size: 12px;
+    color: #6f7982;
+
+}
+.popup-info p {
+    margin: 0;
+}
+.popup-info p:not(:last-of-type){
+    margin-bottom: 12px;
+}
+.card-info img {
+    width: 100px;
+    margin-left: 5px;
+}
+.card-info p {
+    margin-bottom: 12px;
+}
+
+.card-info:before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -8px;
+    top: 6px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 0 9px 10px;
+    border-color: transparent transparent transparent #ffffff;
+}
+.zip-info {
+    top: 15px;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ebebec;
+    margin: 0;
+    padding: 0;
+}
+
+#pay {
+    width: auto;
+    padding: 0px 15px;
+    padding-bottom: 0px;
+    height: 36px;
+    line-height: 32px;
+    color: #fff;
+    font-size: 14px;
+    background: #757F9A; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #757F9A , #D7DDE8); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #757F9A , #D7DDE8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form-submit .info {
+    color: #6f7982;
+    font-size: 10px;
+    margin-top: 16px;
+    margin-bottom: 22px;
+    line-height: 14px;
+}
+.form-submit .info a {
+    text-decoration: none;
+    color: #3d99ce;
+}
+
+.input-error {
+    border-color: #DB4F4F !important;
+    background-color: #FEF8F8 !important;
+}
+.input-error:focus {
+    outline: none;
+}
+.input-correct {
+    border-color: #75CC72 !important;
+    background-color: #F9FEF8 !important;
+}
+.help-info {
+    display: none;
+}
+.help-info.active {
+    display: block;
+    margin-top: -15px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    padding-left: 2px;
+    color: #DB4F4F;
+}
+
+#ExpDate + .help-info {
+    position: absolute;
+    bottom: -8px;
+}
+#SecCode + .help-info {
+    position: absolute;
+    bottom: -30px;
+}
+
+.processing {
+    display: none;
+    position: absolute;
+    top: 0px; right: 0px; bottom: 0px; left: 0px;
+    content: "";
+    z-index: 50;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/227389/spin.svg) no-repeat #fff;
+    background-position: center center;
+    transition: all 0.5s ease-out;
+}
+.success {
+    display: none;
+    position: absolute;
+    top: 0px; right: 0px; bottom: 0px; left: 0px;
+    content: "";
+    z-index: 60;
+    background: #FFF;
+}
+.success h2 {
+    margin: 25px 15px;
+    color: #8d99a7;
+    text-align: center;
+    font-family: "Montserrat Regular";
+}
+.success img {
+    display: block;
+    margin: 35px auto 15px;
+}
+
+.success p, .success a {
+    font-family: "Montserrat Light";
+    padding: 15px 15px 10px 15px;
+    text-align: center;
+    display: block;
+    color: #6f7982;
+    font-size: 15px;
+}
+
+/*#myModal{*/
+    /*width: 90%;*/
+    /*height:70%;*/
+/*}*/
+.no{
+    width: 70px;
+    height: 35px;
+}
+.selectpicker{
+    width: 70px;
+}
+.shop__overlay{
+    width: 100%;
+
+
+}
+.navbar {
+    border: 0 px solid #ccc;
+    top: 0px;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #333;
+}
+
+.navbar-nav > li {
+    /*line-height: 50px;*/
+    position: absolute;
+}
+
+.logo,
+.navbar-nav > li > .btn {
+    margin: 0 15px;
+    float: right;
+}
+
+@media (min-width: 767px) {
+
+    .navbar-search-form {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        float: none;
+        text-align: center;
+        padding: 8px 0;
+    }
+}
+
+#search {
+
+}
+
+
+#search input[type="text"] {
+    background: url(search-white.png) no-repeat 10px 6px #444;
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #d7d7d7 ;
+    width:150px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+#search input[type="text"]:focus {
+    background: url(search-dark.png) no-repeat 10px 6px #fcfcfc ;
+    color: #6a6f75 ;
+    width: 200px;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+/*social media icons*/
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: italics;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: none;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}

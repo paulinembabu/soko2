@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page needs -->
+    <meta charset="utf-8">
+
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="image/logoo.png"/>
+    <title>Click & Pay | TicketSoko </title>
+    <meta name="description" content="">
+
+    <!-- Mobile specific metas  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon  -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+   <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,300,300italic,400,400italic,600,600italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700,300' rel='stylesheet'
+          type='text/css'>
+
+    <!-- CSS Style -->
+    <!-- SWITCHER -->
+    <link rel="stylesheet" id="switcher-css" type="text/css" href="switcher/css/switcher.css" media="all"/>
+    <link rel="alternate stylesheet" type="text/css" href="switcher/css/color1.css" title="color1" media="all"/>
+    <link rel="alternate stylesheet" type="text/css" href="switcher/css/color2.css" title="color2" media="all"/>
+    <link rel="alternate stylesheet" type="text/css" href="switcher/css/color3.css" title="color3" media="all"/>
+    <link rel="alternate stylesheet" type="text/css" href="switcher/css/color4.css" title="color4" media="all"/>
+    <link rel="alternate stylesheet" type="text/css" href="switcher/css/color5.css" title="color5" media="all"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- font-awesome & simple line icons CSS -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/simple-line-icons.css" media="all">
+
+    <!-- owl.carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+
+    <!-- animate CSS  -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css" media="all">
+
+    <!-- flexslider CSS -->
+    <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+
+    <!-- slider CSS  -->
+    <link rel="stylesheet" type="text/css" href="css/slider.css" media="all">
+
+    <!-- style CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+
+    <!-- shortcodes -->
+    <link rel="stylesheet" media="screen" href="css/shortcodes/shortcodes.css" type="text/css"/>
+
+    <!-- accordion -->
+    <link rel="stylesheet" type="text/css" href="js/accordion/accordion.css"/>
+
+    <!-- tooltips -->
+    <link rel="stylesheet" href="js/tooltips/tooltip.css"/>
+
+    <!-- progressbar -->
+    <link rel="stylesheet" href="js/progressbar/ui.progress-bar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- popup newsletter css -->
+
+    <!-- main CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="all">
+</head>
+
+<body class="cms-index-index cms-home-page home-1">
+<!-- mobile menu -->
+<!-- end mobile menu -->
+<div id="events">
+    <!-- end newsletter popup -->
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-xs-12">
+                        <!-- Header Logo -->
+                        <div class="logo"><a title="e-commerce" href="index.html" class="logo-color"><img
+                                alt="e-commerce" src="images/logoo.png" style="width:45%;margin-left:-45% !important"></a></div>
+                        <!-- End Header Logo -->
+                    </div>
+                    <!--support client-->
+                    <div class="col-xs-8 col-sm-5 col-md-6 hidden-xs">
+                    <!--   //  <div class="wrap">
+                            <div class="search" style="position: relative; width: 80%;">
+                                <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                                <button type="submit" class="searchButton">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                       // </div> -->
+                    </div>
+                    <!-- top cart -->
+
+                    <div class="col-lg-3 col-xs-12 top-cart">
+                        <div class="mm-toggle-wrap">
+                            <div class="mm-toggle"><i class="fa fa-align-justify"></i><span class="mm-label">Menu</span>
+                            </div>
+                        </div>
+                        <div class="top-cart-contain">
+                            <div class="mini-cart">
+                                <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle"><a
+                                        href="#"><i class="fa fa-shopping-cart"></i><span class="cart-title">Shopping Cart ({{ cartItems.length }})</span></a>
+                                </div>
+                                <div>
+                                    <div class="top-cart-content">
+                                        <div class="block-subtitle">Recently added item(s)</div>
+                                        <ul id="cart-sidebar" class="mini-products-list">
+                                            <li class="item odd" v-for="cartItem in cartItems">
+                                                <a href="#" title="Ipsums Dolors Untra"
+                                                   class="product-image">
+                                                    <img :src="cartItem.image_url" alt="Lorem ipsum dolor"
+                                                         width="65"></a>
+                                                <div class="product-details"><a href="#" title="Remove This Item"
+                                                                                class="remove-cart"><i
+                                                        class="icon-close"></i></a>
+                                                    <p class="product-name">
+                                                        <a href="#">
+                                                            {{ cartItem.name }}
+                                                        </a>
+                                                    </p>
+                                                    <strong>1</strong> x <span class="price">{{ getEventTotal(cartItem) }}</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="top-subtotal">Subtotal: <span class="price">{{ formatMoney(getTotal()) }}</span>
+                                        </div>
+                                        <div class="actions">
+                                            <button class="btn-checkout" id="top" type="button"><i class="fa fa-check"></i><span>Checkout</span>
+                                            </button>
+                                           <!--  <button class="view-cart" type="button"><i class="fa fa-shopping-cart"></i>
+                                                <span>View Cart</span></button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- Navbar -->
+    <nav>
+        <div class="stick-logo"><a title="e-commerce" href="index.html"><img alt="logo" src="images/logoooo.png"
+                                                                             style="margin-top: -15px;"></a></div>
+        <div class="container">
+            <div class="row">
+                <div class="mtmegamenu">
+                    <ul>
+                    <li>
+                          <form role="form">
+        
+        <!-- Search Field -->
+            <div class="row">
+                <h1 class="text-center">Search Title</h1>
+                <div class="form-group">
+                    <div class="input-group" style="width: 60%;margin-top: -4%;margin-left: 15%;">
+                        <input class="form-control" type="text" name="search" placeholder="Search" required/>
+                        <span class="input-group-btn">
+                            <button class="btn" type="submit" style="color: #FF5722"><span class="glyphicon glyphicon-search" aria-hidden="true"><span style="margin-left:10px;">Search</span></button>
+                        </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+                    </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav -->
+    <div class="main-slideshow">
+        <div class="home-slider full-width">
+            <div class="wpb_wrapper">
+                <div class="wpb_revslider_element wpb_content_element">
+                    <div id="rev_slider_6_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
+                         style="margin:0px auto;background-color:#eee;padding:0px;margin-top:0px;margin-bottom:0px;">
+                        <!-- START REVOLUTION SLIDER 5.0.5 auto mode -->
+                        <div id="rev_slider_6_1" class="rev_slider fullwidthabanner tp-overflow-hidden"
+                             style="display:none;" data-version="5.0.5">
+                            <ul>
+                                <!-- SLIDE  -->
+                                <li data-index="rs-14"
+                                    data-transition="3dcurtain-horizontal,3dcurtain-vertical,cube,cube-horizontal"
+                                    data-slotamount="7,7,7,7" data-easein="default,default,default,default"
+                                    data-easeout="default,default,default,default" data-masterspeed="600,600,600,600"
+                                    data-thumb="" data-rotate="0,0,0,0"
+                                    data-saveperformance="off" data-title="Slide-7" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="images/b.png" alt="" data-bgposition="center center"
+                                         data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg"
+                                         data-no-retina>
+                                    <!-- LAYERS -->
+
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption s3-large   tp-resizeme"
+                                         id="slide-14-layer-1"
+                                         data-x="297"
+                                         data-y="173"
+                                         data-width="['']"
+                                         data-height="['']"
+                                         data-transform_idle="o:1;"
+
+                                         data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:3;sY:3;skX:0;skY:0;opacity:0;s:1000;e:easeInOutExpo;"
+                                         data-transform_out="auto:auto;s:300;"
+                                         data-start="1500"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+
+
+                                         style="z-index: 5; min-width: px; max-width: px; max-width: px; max-width: px; white-space: nowrap; font-weight: 500; color: rgba(51, 51, 51, 1.00);border-color:rgba(255, 214, 88, 1.00);">
+                                        
+                                    </div>
+
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption Gym-SmallText   tp-resizeme"
+                                         id="slide-14-layer-3"
+                                         data-x="300"
+                                         data-y="317"
+                                         data-width="['744']"
+                                         data-height="['92']"
+                                         data-transform_idle="o:1;"
+
+                                         data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:2;sY:1;skX:0;skY:0;opacity:0;s:1000;e:easeInOutExpo;"
+                                         data-transform_out="auto:auto;s:300;"
+                                         data-start="2500"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+
+
+                                        
+          			style="z-index: 6; min-width: 744px; max-width: 744px; max-width: 92px; max-width: 92px; white-space: normal; font-size: 20px; line-height: 30px; font-weight: 400; color: rgba(51, 51, 51, 1.00);font-family:Arial, Helvetica, sans-serif;"> </div>
+
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption tp-resizeme hidden-xs"
+                                         id="slide-14-layer-5"
+                                         data-x="894"
+                                         data-y="158"
+                                         data-width="['none','none','none','none']"
+                                         data-height="['none','none','none','none']"
+                                         data-transform_idle="o:1;rZ:inherit;"
+
+                                         data-transform_in="x:200px;skX:-85px;opacity:0;s:1000;e:easeInOutExpo;"
+                                         data-transform_out="auto:auto;s:300;"
+                                         data-start="3500"
+                                         data-responsive_offset="on"
+
+
+                                         style="z-index: 7;"></div>
+
+                                    <!-- LAYER NR. 4 -->
+                                    <div class="tp-caption rev-btn "
+                                         id="slide-14-layer-8"
+                                         data-x="307"
+                                         data-y="423"
+                                         data-width="['auto']"
+                                         data-height="['auto']"
+                                         data-transform_idle="o:1;"
+                                         data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:0;e:Linear.easeNone;"
+                                         data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(255, 51, 102, 1.00);cursor:pointer;"
+
+                                         data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
+                                         data-transform_out="opacity:0;s:300;s:300;"
+                                         data-start="3500"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+                                         data-responsive="off"
+
+                                         style="z-index: 8; white-space: nowrap; font-size: 14px; line-height: 14px; font-weight: 500; color: rgba(255, 255, 255, 1.00);background-color:rgba(0, 0, 0, 0.75);padding:20px 60px 20px 60px;border-color:rgba(0, 0, 0, 0);border-radius:50px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
+                                        Buy NOW
+                                    </div>
+                                </li>
+
+                                <!-- SLIDE  -->
+                                <!-- SLIDE  -->
+                                <li data-index="rs-17"
+                                    data-transition="3dcurtain-horizontal,3dcurtain-vertical,cube,cube-horizontal"
+                                    data-slotamount="7,7,7,7" data-easein="default,default,default,default"
+                                    data-easeout="default,default,default,default" data-masterspeed="600,600,600,600"
+                                    data-thumb="images/slider/slider5_110px.jpg" data-rotate="0,0,0,0"
+                                    data-saveperformance="off" data-title="Slide-8" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="images/slider/wine2.jpg" alt="" data-bgposition="center center"
+                                         data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg"
+                                         data-no-retina>
+                                    <!-- LAYERS -->
+
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption text-32 tp-resizeme"
+                                         id="slide-17-layer-4"
+                                         data-x="center" data-hoffset="80"
+                                         data-y="center" data-voffset="-103"
+                                         data-width="['']"
+                                         data-height="['']"
+                                         data-transform_idle="o:1;"
+
+                                         data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:3;sY:3;skX:0;skY:0;opacity:0;s:1000;e:easeInOutExpo;"
+                                         data-transform_out="auto:auto;s:300;"
+                                         data-start="1500"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+ 
+                                        
+                                        			style="z-index: 5; min-width: px; max-width: px; max-width: px; max-width: px; white-space: nowrap; font-weight: 500; color: rgba(51, 51, 51, 1.00);border-color:rgba(255, 214, 88, 1.00);"></div>
+
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption s3-large   tp-resizeme"
+                                         id="slide-17-layer-2"
+                                         data-x="480"
+                                         data-y="257"
+                                         data-width="['162']"
+                                         data-height="['107']"
+                                         data-transform_idle="o:1;"
+
+                                         data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:2;sY:1;skX:0;skY:0;opacity:0;s:1000;e:easeInOutExpo;"
+                                         data-transform_out="auto:auto;s:300;"
+                                         data-start="2000"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+
+
+                                         style="z-index: 6; white-space: nowrap;border-color:rgba(255, 214, 88, 1.00);">
+                                        <!-- Banner Two --> <span><!-- Description --></span></div>
+
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption small_text   tp-resizeme"
+                                         id="slide-17-layer-6"
+                                         data-x="800"
+                                         data-y="385"
+                                         data-width="['742']"
+                                         data-height="['60']"
+                                         data-transform_idle="o:1;"
+
+                                         data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:2;sY:1;skX:0;skY:0;opacity:0;s:1000;e:easeInOutExpo;"
+                                         data-transform_out="auto:auto;s:300;"
+                                         data-start="2500"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+
+
+                                         style="z-index: 7; white-space: pre-line; font-size: 25px; line-height: 30px; font-weight: 500;">
+                                        <!-- Lorem ipsum dolor sit amet consectetur. --></div>
+
+                                    <!-- LAYER NR. 4 -->
+                                    <div class="tp-caption rev-btn rev-hiddenicon "
+                                         id="slide-17-layer-7"
+                                         data-x="852"
+                                         data-y="467"
+                                         data-width="['auto']"
+                                         data-height="['auto']"
+                                         data-transform_idle="o:1;"
+                                         data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:0;e:Linear.easeNone;"
+                                         data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(255, 51, 102, 1.00);bc:rgba(0, 0, 0, 0);cursor:pointer;"
+
+                                         data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:1500;e:Power3.easeOut;"
+                                         data-transform_out="opacity:0;s:300;s:300;"
+                                         data-mask_in="x:[100%];y:0;"
+                                         data-start="3000"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+                                         data-responsive="off"
+
+                                         style="z-index: 8; white-space: nowrap; font-size: 14px; line-height: 14px; font-weight: 500; color: rgba(255, 255, 255, 1.00);background-color:rgba(0, 0, 0, 0.75);padding:20px 60px 20px 60px;border-color:rgba(0, 0, 0, 1.00);border-radius:30px 30px 30px 30px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
+                                        Buy Now <i class="fa-icon-chevron-right"></i></div>
+                                </li>
+                                <li data-index="rs-15"
+                                    data-transition="3dcurtain-horizontal,3dcurtain-vertical,cube,cube-horizontal"
+                                    data-slotamount="7,7,7,7" data-easein="default,default,default,default"
+                                    data-easeout="default,default,default,default" data-masterspeed="600,600,600,600"
+                                    data-thumb="images/slider/slider3_110px.jpg" data-rotate="0,0,0,0"
+                                    data-ssaveperformance="off" data-title="Slide-8" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="images/bannertwo.png" alt="" data-bgposition="center center"
+                                         data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg"
+                                         data-no-retina>
+                                    <!-- LAYERS -->
+
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption text-32 tp-resizeme"
+                                         id="slide-17-layer-1"
+                                         data-x="380"
+                                         data-y="175"
+                                         data-width="['']"
+                                         data-height="['']"
+                                         data-transform_idle="o:1;"
+
+                                         data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:3;sY:3;skX:0;skY:0;opacity:0;s:1000;e:easeInOutExpo;"
+                                         data-transform_out="auto:auto;s:300;"
+                                         data-start="1500"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+
+                                         style="z-index: 5; font-size: 45px; line-height: 50px; color: rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);">
+                                        <!-- Banner Two Description --></div>
+
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption s3-large   tp-resizeme"
+                                         id="slide-17-layer-5"
+                                         data-x="380"
+                                         data-y="210"
+                                         data-width="['162']"
+                                         data-height="['107']"
+                                         data-transform_idle="o:1;"
+
+                                         data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:2;sY:1;skX:0;skY:0;opacity:0;s:1000;e:easeInOutExpo;"
+                                         data-transform_out="auto:auto;s:300;"
+                                         data-start="2000"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+
+
+                                         style="z-index: 6; white-space: nowrap;border-color:rgba(255, 214, 88, 1.00);">
+                                        <!-- Banner Three --></div>
+
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption small_text   tp-resizeme"
+                                         id="slide-17-layer-3"
+                                         data-x="380"
+                                         data-y="335"
+                                         data-width="['742']"
+                                         data-height="['60']"
+                                         data-transform_idle="o:1;"
+
+                                         data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:2;sY:1;skX:0;skY:0;opacity:0;s:1000;e:easeInOutExpo;"
+                                         data-transform_out="auto:auto;s:300;"
+                                         data-start="2500"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+
+
+                                         style="z-index: 7; white-space: pre-line; font-size: 25px; line-height: 30px; font-weight: 500;">
+                                        <!-- Lorem ipsum dolor sit amet consectetur. --></div>
+
+                                    <!-- LAYER NR. 4 -->
+                                    <div class="tp-caption rev-btn rev-hiddenicon "
+                                         id="slide-17-layer-8"
+                                         data-x="380"
+                                         data-y="380"
+                                         data-width="['auto']"
+                                         data-height="['auto']"
+                                         data-transform_idle="o:1;"
+                                         data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:0;e:Linear.easeNone;"
+                                         data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(255, 51, 102, 1.00);bc:rgba(0, 0, 0, 0);cursor:pointer;"
+
+                                         data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:1500;e:Power3.easeOut;"
+                                         data-transform_out="opacity:0;s:300;s:300;"
+                                         data-mask_in="x:[100%];y:0;"
+                                         data-start="3000"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+                                         data-responsive="off"
+
+                                         style="z-index: 8; white-space: nowrap; font-size: 14px; line-height: 14px; font-weight: 500; color: rgba(255, 255, 255, 1.00);background-color:rgba(0, 0, 0, 0.75);padding:20px 60px 20px 60px;border-color:rgba(0, 0, 0, 1.00);border-radius:50px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
+                                        Buy NOw <i class="fa-icon-chevron-right"></i></div>
+                                </li>
+                                <!-- SLIDE  -->
+                            </ul>
+                            <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                        </div>
+                    </div>
+                    <!-- END REVOLUTION SLIDER --></div>
+            </div>
+        </div>
+        <!-- .fullwidth-slider -->
+
+        <!-- .slide-slider-nav -->
+    </div>
+    <!-- .fullwidth -->
+ <!--    <section class="welcome-info">
+        <div class="container">
+            <div class="row">
+                <!- Begin page header-->
+              <!--   <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center">
+                            <h1>Welcome to <span class="text- ain">TicketSoko</span></h1>
+                            <div class="divider divider-icon divider-md">&#x268A;&#x268A; &#x2756; &#x268A;&#x268A;
+                            </div>
+                            <p><em>Get Tickets Fast and Easy </em></p>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- End page header-->
+
+        <!--     </div>
+        </div> -->
+  <!--   </section> -->
+ 
+    <!-- COLLECTION-AREA-START -->
+
+    <!-- main container -->
+    
+    <div class="main-container col1-layout" style="margin-top: 0px !important;"/>
+        <div class="container" id="divId">
+            <div class="row">
+                <!--  v-class="{'col-lg-8' : cartItems.length>0, 'col-lg-12': cartItems.length<=0}"> -->
+                <div class="col-sm-12 col-xs-12" v-bind:class="{'col-md-8 col-lg-8' : cartItems.length > 0, 'col-md-12 col-lg-12': cartItems.length <= 0 }">
+                    <!-- Home Tabs  -->
+                       <div class="home-tab col-xs-12 wow fadeInUp">
+                        <ul class="nav home-nav-tabs home-product-tabs">
+                            <li class="active"><a href="#new-arrivals" data-toggle="tab"
+                                                  aria-expanded="false">Events</a></li>
+                        </ul>
+                        <div id="productTabContent" class="tab-content">
+                            <div class="tab-pane active in" id="new-arrivals">
+                                <div class="new-arrivals-pro">
+                                    <div class="slider-items-products">
+                                        <div id="new-arrivals-slider" class="product-flexslider hidden-buttons">
+                                            <div class="slider-item slinder-width-col6">
+                                                <!-- product item start -->
+                                                <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12" v-bind:class="{'col-lg-6 col-md-6': cartItems.length > 0, 'col-lg-4 col-md-4': cartItems.length <= 0}"
+                                                     v-for="event in events">
+                                                    <div class="product-item">
+                                                        <div class="item-inner fadeInUp">
+                                                            <div class="product-thumbnail">
+                                                                <div class="pr-img-area">
+                                                                    <!--  img src="images/i.jpg" -->
+
+                                                                    <figure><img :src="event.image_url" alt="">
+                                                                        <div class="hover-img" style="font-size: 20px">
+                                                                            <span v-html="event.description"></span>
+                                                                        </div>
+                                                                    </figure>
+
+                                                                </div>
+                                                                <div class="pr-info-area">
+                                                                    <div class="pr-button">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-info">
+                                                                <div class="info-inner">
+                                                                    <div class="item-title" style="font-size:20px"><a
+                                                                            title="" href="single_product.html"> {{
+                                                                        event.name }} </a></div>
+                                                                    <div class="item-content">
+                                                                        <div class="rating" style="font-size:20px">
+                                                                            <li> {{ event.from_date }}</li>
+                                                                        </div>
+                                                                        <div class="item-price" style="font-size: 20px">
+                                                                            <div class="price-box"> {{ event.location
+                                                                                }}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cart">
+                                                                        <button type="button" class="add-to-cart-mt"
+                                                                                type="button" class="btn btn-lg"
+                                                                                @click="addTicketsCart(event)"
+                                                                                :data-price=event.amount
+                                                                                class="w3-button cd-add-to-cart"><i
+                                                                                class="fa fa-shopping-cart"></i><span> Add to Cart</span>
+                                                                        </button>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--          style="visibility: hidden;" v-if="(cartItems.length>0) style="visibility: visible""
+                 -->        <!--     <div class="col-lg-4 col-sm-4 col-md-6 hidden-xs"> -->
+                <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12" v-if="cartItems.length > 0" style="margin-top: 8%">
+                    <div class="div-cart-content" style="border: 15px solid #ff0000;">
+                        <div class="block-subtitle"
+                             style="height: 50px; background-color:gray; padding-left: 45%; padding-top: 2%;"> Cart
+                            item(s)
+                        </div>                    
+                        <ul id="cart-sidebar" class="mini-products-list" v-for="cartItem in cartItems">
+                       
+                            <div class="product-details" style="margin-top: 2%">
+                                <span @click="" title="Remove This Item" class="remove-cat"
+                                   style="float: right;">
+                                    <i class="icon-close"
+                                       @click="removeCartEvent(cartItem)"></i>
+                                </span>
+                                <li class="item even"><a href="#" title="Ipsums Dolors Untra" class="product-image">
+                               </a>
+<!--                                 <img:src="cartItem.image_url" alt="" width="65"></a>
+ -->                                    <p class="product-name">
+                                        <a href="#">
+                                            {{ cartItem.name }}
+                                        </a>
+                                    </p>
+
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Season</th>
+                                            <th>No.of Tickets</th>
+                                            <th>Ticket Option</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr v-for="option in cartItem.options">
+                                            <td>{{ option.title }}</td>
+                                            <td>
+                                                <input type="number" min="1" max="200" v-model="option.quantity"
+                                                       class="no" style="width: 60px;">
+                                            </td>
+                                            <td>
+                                                <select @change="selectTicket(cartItem, option.title)"
+                                                        v-model="option.ticket_option_id"
+                                                        class="selectpicker" style="width: 100%;">
+                                                    <option value="0">Select Option</option>
+                                                    <option value="1">
+                                                        Regular - {{ ticketOptionPrice(cartItem, 1,
+                                                        option.title) }}
+                                                    </option>
+                                                    <option value="2">
+
+                                                        Vip - {{ ticketOptionPrice(cartItem, 2,
+                                                        option.title) }}
+                                                    </option>
+                                                    <option value="3"
+                                                    >
+                                                        VVip - {{ ticketOptionPrice(cartItem, 3,
+                                                        option.title) }}
+                                                    </option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                    <strong><span class="price">Total: {{ formatMoney(getEventTotal(cartItem)) }}</span></strong>
+
+                                </li>
+                            </div>
+
+                            <!-- iv end -->
+                       
+                       
+                        </ul>
+
+                        <div class="top-subtotal">TOTAL: <span
+                                class="price">{{ formatMoney(getTotal()) }}</span></div>
+
+                        <div class="actions" style="border-top: 15px solid #ff0000;">
+                          <!--   <button class="btn btn-lg btn-success col-xs-12" onclick="myFunction()">
+                                <span class="glyphicon glyphicon-shopping-cart pull-left"></span> Checkout
+                            </button> -->
+                        </div>
+                        <!-- pay -->
+                        <br>
+                        <br>
+
+                            <div class="forms">
+                            <div class="row" style="border-bottom: 1px solid #000; width: 330px; margin-left: 0.5px;">
+                                <div class="col-md-6 col-lg-6 col-sm-3 col-xs-5 mini-heading">
+                                    <h4>Mobile Checkout</h4>
+                                </div>
+                              
+                                    <div class="col-md-6 col-lg-6 col-sm-3 col-xs-5 mini-headings">
+                                        <h4>Card Checkout</h4>
+                                    </div>
+                            
+                            </div>
+                         <div class="row" style="width: 330px;margin-left: 0.5px;">
+                                <div class="col-md-6 col-lg-6 col-sm-3 col-xs-3 mobile-payment" style="width: 160px;">
+                                <small id="emailHelp" class="form-text text-muted">We only accept Mpesa.</small>
+                                    <div class="form-group" style="margin-top: 5px;border: 2PX solid #ff0000;margin-left: 3px;">
+                                        <label for="number" style="background-color: gray;border-bottom: 2PX solid #ff0000;">Enter Mobile Number</label>
+                                        <input type="text"  v-model="checkoutPhone" name="number" placeholder="07XX XXX XXX" style="width:123px" id="phoneNumber">
+                                    </div>
+                                    <button type="button" name="button" style="width: 80px;border:2px solid;margin-left: 20%; background-color: #FF5722" @click="checkout"><i v-if="isCheckoutProcessing"
+                                                                     class="fa fa-refresh fa-spin"></i>PAY</button>
+                                </div>
+                                    <div class="col-md-6 col-lg-6 col-sm-3 col-xs-3 card-payment" style="width: 153px; border-left: 1px solid;">
+                                        <div class="form-group" style="margin-top: 5px;border: 2PX solid #ff0000;margin-left: 3px;">
+                                            <label for="name" style="background-color: gray;border-bottom: 2PX solid #ff0000;">Enter Your Full  Name</label>
+                                            <input type="text" name="name" placeholder="Jane doe" style="width:114px">
+                                        </div>
+                                        <div class="form-group" style="margin-top: 5px;border: 2PX solid #ff0000;margin-left: 3px;">
+                                            <label for="card-number" style="background-color: gray;border-bottom: 2PX solid #ff0000;"> Enter Card Number</label>
+                                            <input type="number" name="card-number" placeholder="XXXX XXXX XXXX" style="width:114px">
+                                        </div>
+                                        <div class="form-group expiry" style="margin-top: 5px;border: 2PX solid #ff0000;margin-left: 3px;">
+                                            <label for="expire" style="background-color: gray;border-bottom: 2PX solid #ff0000;"> Enter Card Expiry Date</label>
+                                            <input type="date" name="expire" placeholder="07XX XXX XXX" style="width:114px">
+                                        </div>
+                                        <div class="form-group cvv" style="margin-top: 5px;border: 2PX solid #ff0000;margin-left: 3px;">
+                                            <label for="cv" style="background-color: gray;border-bottom: 2PX solid #ff0000;"> Enter The Card  CVV</label>
+                                            <input type="number" name="cv" style="width:114px">
+                                        </div>
+                                        
+                                        <button type="button" name="button" style="width: 80px;border: 2px solid #000; margin-left: 20%; background-color: #FF5722; margin-bottom: 2%">PAY</button>
+                                    </div>
+                                    </div>
+                                    </div>
+
+
+                        <div id="toggle" style="display:none">
+                            <form>
+                                <div class="form-group">
+                                    <br>
+                                    <br>
+                                    <small id="emailHelp" class="form-text text-muted">We only accept Mpesa.</small>
+                                    <br>
+                                    <br>
+                                    <input type="text" v-model="checkoutPhone" class="form-control" id="phoneNumber"
+                                           placeholder="Enter Phone Number" style="width: 50%; margin-left: 30%;">
+                                </div>
+                                <button type="submit" @click="checkout" class="btn btn-danger"
+                                        style="margin-left: 50%;"><i v-if="isCheckoutProcessing"
+                                                                     class="fa fa-refresh fa-spin"></i> Pay
+                                </button>
+                            </form>
+                        </div>
+
+
+                        <!-- pay end -->
+                        <!--        </div> -->
+
+                    </div>
+                    <!--  roow end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end main container -->
+
+    <!-- Begin about section -->
+<!--     <section id="about-section">
+
+        <!- Begin page header-->
+       <!--  <div class="page-header-wrapper">
+            <div class="container">
+                <div class="page-header text-center wow fadeInUp">
+                    <h2>About <span class="text-main">Us</span></h2>
+                    <div class="divider divider-icon divider-md">&#x268A;&#x268A; &#x2756; &#x268A;&#x268A;</div>
+                    <p class="lead text-gray"> At TicketSoko we are all about making sure that you buy tickets Fast and
+                        Easy.
+                        We care about your experience so feel free to contact us to give us your feedback.</p>
+                </div>
+            </div>
+        </div>  -->
+        <!-- End page header-->
+
+        <!-- End page header-->
+
+        <!--   <! Begin info box-1 -->
+        <!-- <div class="info-box-1-wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6"> <a href="#" class="info-box-1 square-icon text-center wow zoomIn" data-wow-delay="0"> <span class="info-box-icon"><i class="fa fa-mobile"></i></span>
+                <div class="info-box-info">
+                  <h4>Fully Responsive</h4>
+                  <div class="divider divider-sm"></div>
+                  <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+                </div>
+                </a> </div>
+              <div class="col-md-3 col-sm-6"> <a href="#" class="info-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.2s"> <span class="info-box-icon"><i class="fa fa-html5"></i></span>
+                <div class="info-box-info">
+                  <h4>HTML5 &amp; CSS3</h4>
+                  <div class="divider divider-sm"></div>
+                  <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+                </div>
+                </a> </div>
+              <div class="col-md-3 col-sm-6"> <a href="#" class="info-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.4s"> <span class="info-box-icon"><i class="fa fa-cogs"></i></span>
+                <div class="info-box-info">
+                  <h4>Clean Design</h4>
+                  <div class="divider divider-sm"></div>
+                  <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+                </div>
+                </a> </div>
+              <div class="col-md-3 col-sm-6"> <a href="#" class="info-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.6s"> <span class="info-box-icon"><i class="fa fa-rocket"></i></span>
+                <div class="info-box-info">
+                  <h4>Well Documented</h4>
+                  <div class="divider divider-sm"></div>
+                  <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+                </div>
+                </a> </div>
+            </div> -->
+        <!-- /.row -->
+        <!--    </div> -->
+        <!-- /.container -->
+        <!--  </div> -->
+        <div class="about-bg"></div>
+    </section>
+
+    <!-- featured slider -->
+    <!-- Testimonials Box -->
+    <!-- End Testimonials Box -->
+    <!--news start-->
+
+    <section id="latest-news" class="news" style="background-color: #eaeaea;">
+        <div class="container">
+            <div class="row">
+                <div class="slider-items-products">
+                    <div id="latest-news-slider" class="product-flexslider hidden-buttons">
+                        <!-- Begin page header-->
+                        <div class="page-header-wrapper wow fadeInUp">
+                            <div class="container">
+                                <div class="page-header text-center">
+                                    <h2>Latest <span class="text-main">Events Done</span></h2>
+                                    <div class="divider divider-icon divider-md">&#x268A;&#x268A; &#x2756; &#x268A;&#x268A;</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End page header-->
+                        <div class="slider-items slider-width-col6">
+
+                            <!-- Item -->
+                            <div class="item wow zoomIn">
+                                <div class="post-wrapper">
+                                    <div class="thumbnail-content"><a class="post-thumbnail" href="#">
+                                        <figure><img class="img-responsive" src="images/prev3.jpg"
+                                                     alt="Post Thumbnail" /></figure>
+                                    </a></div>
+                                    <div class="content-meta">
+                                        <h3><a href="#">Lorem Ipsum Dolor sit Amet!</a></h3>
+                                        <ul class="post-info">
+                                            <li><i class="fa fa-calendar"></i>October 14th, 2017</li>
+                                            <!--  <li><a href="#"><i class="fa fa-comments"></i>10 comments</a></li> -->
+                                        </ul>
+                                        <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            quisque tempus ac eget diam et laoreet phasellus. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Item -->
+                            <div class="item wow zoomIn">
+                                <div class="post-wrapper">
+                                    <div class="thumbnail-content"><a class="post-thumbnail" href="#">
+                                        <figure><img class="img-responsive" src="images/prev3.jpg"
+                                                     alt="Post Thumbnail"/></figure>
+                                    </a></div>
+                                    <div class="content-meta">
+                                        <h3><a href="#">Lorem Ipsum Dolor sit Amet!</a></h3>
+                                        <ul class="post-info">
+                                            <li><i class="fa fa-calendar"></i>October 15th, 2017</li>
+                                            <!-- li><a href="#"><i class="fa fa-comments"></i>03 comments</a></li> -->
+                                        </ul>
+                                        <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            quisque tempus ac eget diam et laoreet phasellus. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div class="item wow zoomIn">
+                                <div class="post-wrapper">
+                                    <div class="thumbnail-content"><a class="post-thumbnail" href="#">
+                                        <figure><img class="img-responsive" src="images/prev3.jpg"
+                                                     alt="Post Thumbnail"/></figure>
+                                    </a></div>
+                                    <div class="content-meta">
+                                        <h3><a href="#">Lorem Ipsum Dolor sit Amet!</a></h3>
+                                        <ul class="post-info">
+                                            <li><i class="fa fa-calendar"></i>November 23rd-24th, 2017</li>
+                                            <!-- li><a href="#"><i class="fa fa-comments"></i>14 comments</a></li> -->
+                                        </ul>
+                                        <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            quisque tempus ac eget diam et laoreet phasellus. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Item -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- counter chart -->
+    <!-- BG video -->
+   <!--  <section class="video-bg"> -->
+        <!-- Begin page header-->
+      <!--   <div class="page-header-wrapper">
+            <div class="container">
+                <div class="page-header text-center wow fadeInUp">
+                    <h2>Video <span class="text-main">Background</span></h2>
+                    <div class="divider divider-icon divider-md">&#x268A;&#x268A; &#x2756; &#x268A;&#x268A;</div>
+                    <p class="lead text-gray"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation adipisicing elit incididunt ad minim veniam ipsum dolor. </p>
+                    <a class="play-bnt"><i class="fa fa-play-circle"></i> </a></div>
+            </div>
+        </div> -->
+        <!-- End page header-->
+   <!--      <video autoplay muted="muted" loop>
+            <source src="video/video.mp4" type="video/mp4">
+            <source src="video/video.webm" type="video/webm">
+        </video>
+    </section> -->
+    <!-- our clients Slider -->
+    <!-- home contact -->
+    <section id="contact" class="gray">
+        <div class="container">
+
+            <!-- Begin page header-->
+            <div class="page-header-wrapper">
+                <div class="container">
+                    <div class="page-header text-center wow fadeInUp">
+                        <h2>Contact <span class="text-main">Us</span></h2>
+                        <div class="divider divider-icon divider-md">&#x268A;&#x268A; &#x2756; &#x268A;&#x268A;</div>
+                        <p class="lead text-gray"> You can reach the ticketSoko team from the addresses below.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End page header-->
+
+            <div class="row">
+                <div class="col-sm-4 adress-element wow zoomIn"><i class="fa fa-home fa-2x"></i>
+                    <h3>Our Address</h3>
+                    <span class="font-l">7064 Lorem Ipsum Vestibulum 666/13</span></div>
+                <div class="col-sm-4 adress-element wow zoomIn"><i class="fa fa-comment fa-2x"></i>
+                    <h3>Our mail</h3>
+                    <span class="font-l"><a href="mailto:support@justtheme.com">support@ticketsoko.com</a></span></div>
+                <div class="col-sm-4 adress-element wow zoomIn"><i class="fa fa-phone fa-2x"></i>
+                    <h3>Our phone</h3>
+                    <span class="font-l">+254 728 048 896</span></div>
+            </div>
+        </div>
+    </section>
+
+  <!-- COLLECTION-AREA-START -->
+  <section class="collestion-area">
+    <div class="container">
+      <div class="page-header text-center wow fadeInUp">
+        <h2>Event <span class="text-main">Merchandises</span></h2>
+        <div class="divider divider-icon divider-md">&#x268A;&#x268A; &#x2756; &#x268A;&#x268A;</div>
+        <p class="lead text-gray"> Buy merchandise from the  above listed events. </p>
+      </div>
+      <div class="collection-content">
+        <div class="row" v-for="merchandise in merchandises">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="wow bounceInUp" data-wow-delay="0.2s"> 
+              <!-- SINGLE-COLLECTION-START -->
+              <div class="single-collection"> 
+              <img :src="merchandise.image_url" alt="">
+                <div class="collections-link"> {{ merchandise.name}} </div>
+              </div>
+            </div>
+            <!-- SINGLE-COLLECTION-END --> 
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="wow bounceInUp" data-wow-delay="0.5s"> 
+              <!-- SINGLE-COLLECTION-START -->
+              <div class="single-collection"> <a href="#"> <img src="images/handbag-col.jpg" alt="" class="img-thumbnail"> </a>
+                <div class="collections-link"> <a href="#">Handbag</a> </div>
+              </div>
+            </div>
+            <!-- SINGLE-COLLECTION-END --> 
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="wow bounceInUp" data-wow-delay="0.8s"> 
+              <!-- SINGLE-COLLECTION-START -->
+              <div class="single-collection"> <a href="#"> <img src="images/women-col.jpg" alt="" class="img-thumbnail"> </a>
+                <div class="collections-link"> <a href="#">Women</a> </div>
+              </div>
+            </div>
+            <!-- SINGLE-COLLECTION-END --> 
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="wow bounceInUp" data-wow-delay="1s"> 
+              <!-- SINGLE-COLLECTION-START -->
+              <div class="single-collection"> <a href="#"> <img src="images/shoes-col.jpg" alt="" class="img-thumbnail"> </a>
+                <div class="collections-link"> <a href="#">Shoes</a> </div>
+              </div>
+            </div>
+            <!-- SINGLE-COLLECTION-END --> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Subscribe for Our Newsletter!</h3>
+                        <p>Enjoy our newsletter to stay updated with the latest news and special sales.</p>
+                        <p>Let's your email address here!</p>
+                        <form id="newsletter-validate-detail" method="post" action="#">
+                            <div class="newsletter-inner">
+                                <input class="newsletter-email" name='Email' placeholder='Enter Your Email'/>
+                                <button class="button subscribe" type="submit" title="Subscribe">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-coppyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12 coppyright"> Copyright © 2017 <a href="#"> TicketSoko </a>. All
+                        Rights Reserved.
+                    </div>
+                    <div class="social col-sm-6 col-xs-12">
+                        <ul class="inline-mode">
+                            <li class="social-network fb"><a title="Connect us on Facebook" target="_blank"
+                                                             href="https://www.facebook.com/TicketSoko-118258788840525/"><i
+                                    class="fa fa-facebook"></i></a></li>
+                            <li class="social-network tw"><a title="Connect us on Twitter" target="_blank"
+                                                             href="https://twitter.com/ticketsoko"><i
+                                    class="fa fa-twitter"></i></a></li>
+                            <li class="social-network rss"><a title="Connect us on Instagram" target="_blank"
+                                                              href="https://www.instagram.com/ticketsoko/"><i
+                                    class="fa fa-instagram"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- End Footer -->
+    <a href="#" class="totop"> </a></div>
+<div class="switcher-wrapper hidden-xs">
+    <div class="demo_changer">
+        <div class="demo-icon customBgColor"><i class="fa fa-cog fa-spin fa-2x"></i></div>
+        <div class="form_holder">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="predefined_styles">
+                        <div class="skin-theme-switcher">
+                            <h4>Color</h4>
+                            <a href="#" data-switchcolor="color1" class="styleswitch"
+                               style="background-color:#ff3366;"> </a> <a href="#" data-switchcolor="color2"
+                                                                          class="styleswitch"
+                                                                          style="background-color:#0078ff;"> </a> <a
+                                href="#" data-switchcolor="color3" class="styleswitch"
+                                style="background-color:#00ac00;"> </a> <a href="#" data-switchcolor="color4"
+                                                                           class="styleswitch"
+                                                                           style="background-color:#ff0000;"> </a> <a
+                                href="#" data-switchcolor="color5" class="styleswitch"
+                                style="background-color:#8b6fd2;"> </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- JS -->
+<!-- from the Ticketsoko -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vuex@2.0.0"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="jspdf.min.js"></script>
+<script src="qr.js"></script>
+<script src="js/app.js"></script>
+<script src="store.js"></script>
+<script src="events.js"></script>
+
+
+<script src="https://use.fontawesome.com/97ec197995.js"></script>
+<!-- <script src="js/checkout.js"></script>
+ <script src="js/search.js"></script>-->
+<script>
+    if (!window.jQuery) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>')
+</script>
+
+<script>
+    if (!window.jQuery) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>')
+</script>
+
+<!-- cookies js -->
+<script type="text/javascript" src="js/cookies.js"></script>
+
+<!-- jquery js -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<!-- bootstrap js -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!-- switcher js -->
+<script src="switcher/js/colorpicker.js"></script>
+
+<!-- owl.carousel.min js -->
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+<!-- bxslider js -->
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+
+<!--jquery-slider js -->
+<script type="text/javascript" src="js/slider.js"></script>
+
+<!-- megamenu js -->
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var mega_menu = '0';
+
+    /* ]]> */
+</script>
+
+<!-- jquery.mobile-menu js -->
+<script type="text/javascript" src="js/mobile-menu.js"></script>
+
+<!-- jquery.waypoints js -->
+<script type="text/javascript" src="js/waypoints.js"></script>
+
+<!--jquery-ui.min js -->
+<script src="js/jquery-ui.js"></script>
+
+<!-- main js -->
+<script type="text/javascript" src="js/main.js"></script>
+
+<!-- infographic js -->
+<script type="text/javascript" src="js/infographic.js"></script>
+
+<!-- tooltips js -->
+<script src="js/tooltips/jquery.tooltip.js"></script>
+
+<!-- progress js -->
+<script src="js/progressbar/progress.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- jquery.waypoints js -->
+<script type="text/javascript" src="js/waypoints.js"></script>
+
+<!-- animate number js -->
+<script src="js/aninum/jquery.animateNumber.min.js"></script>
+
+<!-- popup newsletter js -->
+<script type="text/javascript" src="js/popup-newsletter.js"></script>
+<script type="text/javascript">
+
+
+    /******************************************
+     -    PREPARE PLACEHOLDER FOR SLIDER    -
+     ******************************************/
+
+    var setREVStartSize = function () {
+    };
+
+
+    setREVStartSize();
+
+    function revslider_showDoubleJqueryError(sliderID) {
+    }
+
+    var tpj = jQuery;
+    tpj.noConflict();
+    var revapi6;
+    tpj(document).ready(function () {
+        if (tpj("#rev_slider_6_1").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_6_1");
+        } else {
+            revapi6 = tpj("#rev_slider_6_1").show().revolution({
+                sliderType: "standard",
+                sliderLayout: "auto",
+                dottedOverlay: "none",
+                delay: 6000,
+                navigation: {
+                    keyboardNavigation: "off",
+                    keyboard_direction: "horizontal",
+                    mouseScrollNavigation: "off",
+                    onHoverStop: "off",
+                    touch: {
+                        touchenabled: "on",
+                        swipe_threshold: 0.7,
+                        swipe_min_touches: 1,
+                        swipe_direction: "horizontal",
+                        drag_block_vertical: false
+                    }
+                    ,
+                    arrows: {
+                        style: "hades",
+                        enable: true,
+                        hide_onmobile: false,
+                        hide_onleave: true,
+                        hide_delay: 200,
+                        hide_delay_mobile: 1200,
+                        tmp: '<div class="tp-arr-allwrapper">	<div class="tp-arr-imgholder"></div></div>',
+                        left: {
+                            h_align: "left",
+                            v_align: "center",
+                            h_offset: 20,
+                            v_offset: 0
+                        },
+                        right: {
+                            h_align: "right",
+                            v_align: "center",
+                            h_offset: 20,
+                            v_offset: 0
+                        }
+                    }
+                    ,
+                    bullets: {
+                        enable: true,
+                        hide_onmobile: false,
+                        style: "hades",
+                        hide_onleave: true,
+                        hide_delay: 200,
+                        hide_delay_mobile: 1200,
+                        direction: "horizontal",
+                        h_align: "center",
+                        v_align: "bottom",
+                        h_offset: 0,
+                        v_offset: 20,
+                        space: 5,
+                        tmp: '<span class="tp-bullet-image"></span>'
+                    }
+                },
+                gridwidth: 1920,
+                gridheight: 645,
+                lazyType: "none",
+                shadow: 0,
+                spinner: "spinner0",
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+                shuffle: "off",
+                autoHeight: "on",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                startWithSlide: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: false,
+                }
+            });
+        }
+    });
+    /*ready*/
+
+    jQuery(document).ready(function () {
+
+
+    });
+
+    function myFunction() {
+        var x = document.getElementById("toggle");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+      jQuery(document).ready(function () {
+        $("#top").click(function () {
+            $('html, body').animate({
+                scrollTop: $(".forms").offset().top
+            }, 2000);
+        });
+    });
+
+    jQuery(document).ready(function () {
+        $("#slide-17-layer-8").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#divId").offset().top
+            }, 2000);
+        });
+    });
+    jQuery(document).ready(function () {
+        $("#slide-17-layer-7").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#divId").offset().top
+            }, 2000);
+        });
+    });
+    jQuery(document).ready(function () {
+        $("#slide-14-layer-8").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#divId").offset().top
+            }, 2000);
+        });
+    });
+</script>
+</body>
+</html>
