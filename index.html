@@ -89,26 +89,26 @@
         <div class="header-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3 col-xs-12">
+                    <div class="col-lg-4 col-sm-3 col-xs-12">
                         <!-- Header Logo -->
                         <div class="logo"><a title="e-commerce" href="index.html" class="logo-color"><img
                                 alt="e-commerce" src="images/logoo.png" style="width:45%;margin-left:-45% !important"></a></div>
                         <!-- End Header Logo -->
                     </div>
                     <!--support client-->
-                    <div class="col-xs-8 col-sm-5 col-md-6 hidden-xs">
-                    <!--   //  <div class="wrap">
+                   <!--  <div class="col-xs-8 col-sm-5 col-md-6 hidden-xs">
+                      //  <div class="wrap">
                             <div class="search" style="position: relative; width: 80%;">
                                 <input type="text" class="searchTerm" placeholder="What are you looking for?">
                                 <button type="submit" class="searchButton">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </div>
-                       // </div> -->
-                    </div>
+                       // </div>
+                    </div> -->
                     <!-- top cart -->
 
-                    <div class="col-lg-3 col-xs-12 top-cart">
+                    <div class="col-lg-8 col-xs-12 top-cart">
                         <div class="mm-toggle-wrap">
                             <div class="mm-toggle"><i class="fa fa-align-justify"></i><span class="mm-label">Menu</span>
                             </div>
@@ -152,6 +152,12 @@
                             </div>
                         </div>
                     </div>
+                    <div style="margin-left: 120%; margin-top: 3%;">
+                 <button style="background: #FF5722">
+            <a class="nav-link btn-orange btn-sm btn create-btn" href="create.php">Create Event</a>
+
+            </button>
+            </div>
                 </div>
             </div>
         </div>
@@ -181,7 +187,9 @@
                         </span>
                     </div>
                 </div>
+
             </div>
+
             
         </form>
                     </li>
@@ -1022,12 +1030,15 @@
                         <h3>Subscribe for Our Newsletter!</h3>
                         <p>Enjoy our newsletter to stay updated with the latest news and special sales.</p>
                         <p>Let's your email address here!</p>
-                        <form id="newsletter-validate-detail" method="post" action="#">
+                        <form id="newsletter-validate-detail" method="post" action="http://ticketpay.wizhub.co.ke/ticket-pay-api/public/api/frontend/newsubscribers">
                             <div class="newsletter-inner">
-                                <input class="newsletter-email" name='Email' placeholder='Enter Your Email'/>
-                                <button class="button subscribe" type="submit" title="Subscribe">Subscribe</button>
+                                <input class="newsletter-email" name="email" id="email" placeholder='Enter Your Email's/>
+                                <button class="button subscribe" type="submit" title="Subscribe" onclick="document.getElementById('newsletter-validate-detail').submit();">Subscribe</button>
                             </div>
-                        </form>
+                           </form>
+                           <?php
+                            include "print.php";
+                           ?>
                     </div>
                 </div>
             </div>
@@ -1321,6 +1332,7 @@
             }, 2000);
         });
     });
+
 </script>
 </body>
 </html>
